@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Préparation Mobilité Internationale BTS</title>
+
+<style>
+:root{
+    --primary:#1e3a8a;
+    --secondary:#2563eb;
+    --accent:#f59e0b;
+    --light:#f8fafc;
+    --dark:#0f172a;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    padding:1rem 5%;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    color:white;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    color:var(--primary);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.timeline{
+    display:grid;
+    gap:20px;
+}
+
+.step{
+    background:white;
+    padding:20px;
+    border-left:5px solid var(--secondary);
+    border-radius:8px;
+}
+
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">🌍 Mobilité BTS</div>
+
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Anglais</a></li>
+            <li><a href="#">Espagnol</a></li>
+            <li><a href="#">Quiz</a></li>
+            <li><a href="#">Ressources</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Préparer son stage à l'étranger</h1>
+
+    <p>
+        Bienvenue sur la plateforme d'accompagnement des étudiants de BTS.
+        Retrouvez ici des ressources complémentaires pour développer vos
+        compétences en anglais et en espagnol, comprendre le monde
+        professionnel à l'international et gagner en autonomie pendant
+        votre mobilité.
+    </p>
+
+    <a href="#ressources" class="btn">Commencer</a>
+</section>
+
+<section class="section" id="ressources">
+    <div class="container">
+
+        <h2 class="section-title">📚 Ressources disponibles</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🇬🇧 Anglais professionnel</h3>
+                <p>
+                    E-mails, appels téléphoniques, réunions,
+                    vocabulaire métier, entretiens et communication
+                    en entreprise.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🇪🇸 Espagnol professionnel</h3>
+                <p>
+                    Correspondance, accueil client,
+                    communication interne et situations
+                    professionnelles fréquentes.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🏠 Vie quotidienne</h3>
+                <p>
+                    Logement, transports, santé,
+                    démarches administratives et
+                    situations de la vie courante.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📝 Quiz & entraînements</h3>
+                <p>
+                    Exercices interactifs pour réviser
+                    le vocabulaire et les compétences
+                    travaillées en cours.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <h2 class="section-title">🚀 Parcours conseillé</h2>
+
+        <div class="timeline">
+
+            <div class="step">
+                <strong>1. Avant le départ</strong><br>
+                Réviser le vocabulaire professionnel et les situations courantes.
+            </div>
+
+            <div class="step">
+                <strong>2. Pendant le stage</strong><br>
+                Utiliser les fiches pratiques et les ressources audio.
+            </div>
+
+            <div class="step">
+                <strong>3. Chaque semaine</strong><br>
+                Réaliser les activités complémentaires et les quiz.
+            </div>
+
+            <div class="step">
+                <strong>4. Retour d'expérience</strong><br>
+                Préparer son bilan de mobilité et valoriser ses compétences.
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <h2 class="section-title">🎯 Objectifs</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Communiquer efficacement</h3>
+                <p>Développer l'aisance orale et écrite dans un contexte professionnel.</p>
+            </div>
+
+            <div class="card">
+                <h3>Gagner en autonomie</h3>
+                <p>Être capable de gérer les situations du quotidien à l'étranger.</p>
+            </div>
+
+            <div class="card">
+                <h3>Réussir sa mobilité</h3>
+                <p>Arriver mieux préparé et profiter pleinement de l'expérience.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>
+        Plateforme pédagogique BTS Mobilité Internationale
+        © 2026
+    </p>
+</footer>
+
+</body>
+</html>
