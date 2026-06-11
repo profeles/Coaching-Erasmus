@@ -1,17 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Préparation Mobilité Internationale BTS</title>
+
+<title>Coaching Erasmus - Mobilité BTS</title>
 
 <style>
 :root{
-    --primary:#1e3a8a;
-    --secondary:#2563eb;
-    --accent:#f59e0b;
-    --light:#f8fafc;
-    --dark:#0f172a;
+    --primary:#1f4db8;
+    --primary-dark:#163b90;
+    --secondary:#f59e0b;
+    --light:#f4f6fa;
+    --white:#ffffff;
+    --text:#2c3e50;
+    --shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
 *{
@@ -21,66 +25,72 @@
 }
 
 body{
-    font-family: "Segoe UI", sans-serif;
-    background:#f5f7fa;
-    color:#333;
+    font-family:Segoe UI, sans-serif;
+    background:var(--light);
+    color:var(--text);
     line-height:1.6;
 }
 
 header{
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    background:var(--primary);
     color:white;
-    padding:1rem 5%;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 nav{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:18px 0;
 }
 
 .logo{
-    font-size:1.4rem;
+    font-size:1.6rem;
     font-weight:bold;
 }
 
-nav ul{
-    list-style:none;
+.menu{
     display:flex;
-    gap:20px;
+    gap:25px;
 }
 
-nav a{
+.menu a{
     color:white;
     text-decoration:none;
+    font-weight:500;
 }
 
 .hero{
-    text-align:center;
-    padding:80px 20px;
+    background:linear-gradient(135deg,var(--primary),#315fd4);
     color:white;
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    text-align:center;
+    padding:100px 20px;
 }
 
 .hero h1{
-    font-size:3rem;
+    font-size:3.2rem;
     margin-bottom:20px;
 }
 
 .hero p{
-    max-width:800px;
+    max-width:850px;
     margin:auto;
-    font-size:1.1rem;
+    font-size:1.2rem;
 }
 
 .btn{
     display:inline-block;
-    margin-top:30px;
-    background:var(--accent);
+    margin-top:35px;
+    background:var(--secondary);
     color:white;
+    padding:15px 35px;
+    border-radius:10px;
     text-decoration:none;
-    padding:15px 30px;
-    border-radius:8px;
     font-weight:bold;
 }
 
@@ -91,13 +101,14 @@ nav a{
 }
 
 .section{
-    padding:70px 0;
+    padding:80px 0;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:40px;
     color:var(--primary);
+    margin-bottom:50px;
+    font-size:2rem;
 }
 
 .cards{
@@ -108,9 +119,9 @@ nav a{
 
 .card{
     background:white;
-    border-radius:12px;
     padding:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    border-radius:15px;
+    box-shadow:var(--shadow);
     transition:0.3s;
 }
 
@@ -123,168 +134,261 @@ nav a{
     margin-bottom:10px;
 }
 
-.timeline{
+.card ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.resources{
     display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
     gap:20px;
 }
 
-.step{
+.resource{
     background:white;
     padding:20px;
-    border-left:5px solid var(--secondary);
-    border-radius:8px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+}
+
+.challenge{
+    background:white;
+    border-left:6px solid var(--secondary);
+    padding:30px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
 }
 
 footer{
-    background:var(--dark);
+    background:var(--primary-dark);
     color:white;
     text-align:center;
-    padding:25px;
+    padding:30px;
     margin-top:50px;
 }
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .menu{
+        display:none;
+    }
+}
 </style>
+
 </head>
+
 <body>
 
 <header>
     <nav>
-        <div class="logo">🌍 Mobilité BTS</div>
 
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Anglais</a></li>
-            <li><a href="#">Espagnol</a></li>
-            <li><a href="#">Quiz</a></li>
-            <li><a href="#">Ressources</a></li>
-        </ul>
-    </nav>
+```
+    <div class="logo">
+        🌍 Coaching Erasmus BTS
+    </div>
+
+    <div class="menu">
+        <a href="#">Accueil</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#ressources">Ressources</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#apropos">À propos</a>
+    </div>
+
+</nav>
+```
+
 </header>
 
 <section class="hero">
-    <h1>Préparer son stage à l'étranger</h1>
 
-    <p>
-        Bienvenue sur la plateforme d'accompagnement des étudiants de BTS.
-        Retrouvez ici des ressources complémentaires pour développer vos
-        compétences en anglais et en espagnol, comprendre le monde
-        professionnel à l'international et gagner en autonomie pendant
-        votre mobilité.
-    </p>
+```
+<h1>Prépare ton stage à l'étranger</h1>
 
-    <a href="#ressources" class="btn">Commencer</a>
+<p>
+    Cette plateforme accompagne les étudiants de BTS dans leur préparation
+    linguistique, professionnelle, administrative et interculturelle avant
+    leur mobilité internationale.
+</p>
+
+<a href="#parcours" class="btn">
+    Commencer le parcours
+</a>
+```
+
+</section>
+
+<section class="section" id="parcours">
+
+```
+<div class="container">
+
+    <h2 class="section-title">
+        🚀 Ton parcours mobilité
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>👤 Module 1 : Se présenter</h3>
+            <ul>
+                <li>Faire connaissance</li>
+                <li>Parler de soi</li>
+                <li>Présenter sa formation</li>
+                <li>Verbes du quotidien</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🏢 Module 2 : Le monde de l'entreprise</h3>
+            <ul>
+                <li>Vocabulaire professionnel</li>
+                <li>CV et LinkedIn</li>
+                <li>Mails professionnels</li>
+                <li>Recherche de stage</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>✈️ Module 3 : Préparer son départ</h3>
+            <ul>
+                <li>Documents administratifs</li>
+                <li>Culture du pays</li>
+                <li>Logement</li>
+                <li>Transports</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>💬 Module 4 : Communiquer en entreprise</h3>
+            <ul>
+                <li>Entretien</li>
+                <li>Communication professionnelle</li>
+                <li>Situations réelles</li>
+                <li>Improvisation</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🏥 Module 5 : Vie quotidienne</h3>
+            <ul>
+                <li>Santé</li>
+                <li>Services</li>
+                <li>Urgences</li>
+                <li>Autonomie</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<section class="section">
+
+```
+<div class="container">
+
+    <h2 class="section-title">
+        📋 Espace Mobilité Erasmus
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Documents essentiels</h3>
+            <ul>
+                <li>Convention de stage</li>
+                <li>CV</li>
+                <li>Lettre de motivation</li>
+                <li>Pièces justificatives</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Avant le départ</h3>
+            <ul>
+                <li>Checklist complète</li>
+                <li>Assurance</li>
+                <li>Carte européenne</li>
+                <li>Budget</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+```
+
 </section>
 
 <section class="section" id="ressources">
-    <div class="container">
 
-        <h2 class="section-title">📚 Ressources disponibles</h2>
+```
+<div class="container">
 
-        <div class="cards">
+    <h2 class="section-title">
+        📚 Ressources rapides
+    </h2>
 
-            <div class="card">
-                <h3>🇬🇧 Anglais professionnel</h3>
-                <p>
-                    E-mails, appels téléphoniques, réunions,
-                    vocabulaire métier, entretiens et communication
-                    en entreprise.
-                </p>
-            </div>
+    <div class="resources">
 
-            <div class="card">
-                <h3>🇪🇸 Espagnol professionnel</h3>
-                <p>
-                    Correspondance, accueil client,
-                    communication interne et situations
-                    professionnelles fréquentes.
-                </p>
-            </div>
+        <div class="resource">📄 CV & LinkedIn</div>
+        <div class="resource">📧 Mails professionnels</div>
+        <div class="resource">📚 Glossaires techniques</div>
+        <div class="resource">🎥 Vidéos</div>
+        <div class="resource">📝 Quiz</div>
+        <div class="resource">📋 Documents Erasmus</div>
 
-            <div class="card">
-                <h3>🏠 Vie quotidienne</h3>
-                <p>
-                    Logement, transports, santé,
-                    démarches administratives et
-                    situations de la vie courante.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>📝 Quiz & entraînements</h3>
-                <p>
-                    Exercices interactifs pour réviser
-                    le vocabulaire et les compétences
-                    travaillées en cours.
-                </p>
-            </div>
-
-        </div>
     </div>
+
+</div>
+```
+
 </section>
 
 <section class="section">
-    <div class="container">
 
-        <h2 class="section-title">🚀 Parcours conseillé</h2>
+```
+<div class="container">
 
-        <div class="timeline">
+    <h2 class="section-title">
+        🎯 Défi de la semaine
+    </h2>
 
-            <div class="step">
-                <strong>1. Avant le départ</strong><br>
-                Réviser le vocabulaire professionnel et les situations courantes.
-            </div>
+    <div class="challenge">
 
-            <div class="step">
-                <strong>2. Pendant le stage</strong><br>
-                Utiliser les fiches pratiques et les ressources audio.
-            </div>
+        <h3>Présente ton BTS en 1 minute</h3>
 
-            <div class="step">
-                <strong>3. Chaque semaine</strong><br>
-                Réaliser les activités complémentaires et les quiz.
-            </div>
-
-            <div class="step">
-                <strong>4. Retour d'expérience</strong><br>
-                Préparer son bilan de mobilité et valoriser ses compétences.
-            </div>
-
-        </div>
+        <p>
+            Enregistre-toi en anglais ou en espagnol et présente
+            ton parcours, ta spécialité et ton projet professionnel.
+        </p>
 
     </div>
+
+</div>
+```
+
 </section>
 
-<section class="section">
-    <div class="container">
+<footer id="apropos">
 
-        <h2 class="section-title">🎯 Objectifs</h2>
+```
+<p>
+    Coaching Erasmus BTS • Plateforme pédagogique de préparation
+    à la mobilité internationale
+</p>
+```
 
-        <div class="cards">
-
-            <div class="card">
-                <h3>Communiquer efficacement</h3>
-                <p>Développer l'aisance orale et écrite dans un contexte professionnel.</p>
-            </div>
-
-            <div class="card">
-                <h3>Gagner en autonomie</h3>
-                <p>Être capable de gérer les situations du quotidien à l'étranger.</p>
-            </div>
-
-            <div class="card">
-                <h3>Réussir sa mobilité</h3>
-                <p>Arriver mieux préparé et profiter pleinement de l'expérience.</p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<footer>
-    <p>
-        Plateforme pédagogique BTS Mobilité Internationale
-        © 2026
-    </p>
 </footer>
 
 </body>
